@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador 1</title>
+</head>
+<body>
+    <h1>
+        Contador com três botões: 
+        aumentar, diminuir, zerar.</br>
+        Utilizando a lógico com escutador de </br>
+        envento (add.addEventListener) para executar uma função (function).</br>
+        Utilizando .innetHTML para jogar o valor para dentro do input.</br>
+        Lógica p/ converter variével tipo text para</br> 
+        number utilizando a MATEMÁTICA.
+    </h1>
+            <button id = "aumentar" type="button" onclick="mais()">AUMENTAR</button>
+            <button id = "diminuir" type="button" onclick="menos()">DIMINUIR</button>
+            <button id = "resetar" type="button" onclick="zero()">RESETAR</button></br>
+            <input type="number" id="contador" value=""> </input>
+            
+    <script>
+                let aumentar$ = document.getElementById("aumentar");
+                let diminuir$ = document.getElementById("diminuir");
+                let resetar$ = document.getElementById("resetar");
+                // let cont$ = document.getElementById("contador");
+                // document.queryCommandValue("id=contador").value = contador;
+
+                let cont$ = 0;
+               
+                aumentar$.addEventListener("click", function(){
+                // cont$ = (cont$*1) + 1;
+                // contador.innerHTML = cont$;
+                contador.innerHTML = cont$ = cont$ + 1;
+                // document.getElementById("contador").value = cont$;
+                })
+                               
+                
+                diminuir$.addEventListener("click", function(){
+                contador.innerHTML = cont$ = cont$ - 1;
+                document.getElementById("contador").value = cont$;
+                })
+
+                resetar$.addEventListener("click", function(){
+                contador.innerHTML = cont$ = 0;
+                document.getElementById("contador").value = cont$;
+                })
+    </script>
+</body>
+</html>
